@@ -7,11 +7,11 @@ function createCar(plate, color, brand) {
     var carCreated = document.getElementById("carCreated");
     carCreated.style.display = "block";
     var plateRes = document.getElementById("plateRes");
-    plateRes.innerHTML = "Plate: " + car.plate;
+    plateRes.innerHTML = "Plate: " + "<b>" + car.plate + "</b>";
     var brandRes = document.getElementById("brandRes");
-    brandRes.innerHTML = "Brand: " + car.brand;
+    brandRes.innerHTML = "Brand: " + "<b>" + car.brand + "</b>";
     var colorRes = document.getElementById("colorRes");
-    colorRes.innerHTML = "Color: " + car.color;
+    colorRes.innerHTML = "Color: " + "<b>" + car.color + "</b>";
     // document.body.innerText="CAR: PLATE: " + car.plate 
     // + " COLOR: " + car.color + " BRAND: " + car.brand;
 }
