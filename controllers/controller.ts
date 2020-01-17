@@ -6,8 +6,8 @@ function createCar(plate:string,color:string,brand:string){
     let formInput = document.getElementById("formInput") as HTMLElement;
    formInput.style.display = "none";
 
-   let carCreated = document.getElementById("carCreated") as HTMLElement;
-   carCreated.style.display = "block";
+   let addWheels = document.getElementById("addWheels") as HTMLElement;
+   addWheels.style.display = "block";
 
    let plateRes = document.getElementById("plateRes") as HTMLElement;
    plateRes.innerHTML = "Plate: " + "<b>" + car.plate + "</b>";
