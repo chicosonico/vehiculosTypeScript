@@ -14,152 +14,169 @@
 
 <body>
     <main class="container my-5 ">
-    <div id="formInput" style="display:block">
-        <div class="row align-items-center">
-            <div class="col">
-    
-            </div>
-            <div class="col">
-                <h1 style="text-align: center;">Create a car</h1>
-            </div>
-            <div class="col">
-    
-            </div>
-    
-        </div>
-    
-        <div>
-    
-            <form class="container my-5">
-    
-                <div class="row d-flex justify-content-center">
-    
-                    <div class="form-group col-md-2">
-                        <label for="inputPlate">Plate</label>
-                        <input type="text" class="form-control" id="inputPlate">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputBrand">Brand</label>
-                        <input type="text" class="form-control" id="inputBrand">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputColor">Color</label>
-                        <input type="text" class="form-control" id="inputColor">
-                    </div>
-    
-    
-    
+
+        <div id="formInput" style="display:block">
+            <div class="row align-items-center">
+                <div class="col">
+
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="form-group col-md-2">
-                        <button type="button" class="btn btn-primary"
-                            onclick="createCar(inputPlate.value, inputColor.value, inputBrand.value,)">Create</button>
-                        <p id="carInfo"></p>
-                    </div>
-    
-                    <div class="form-group col-md-2">
-                    </div>
-    
-                    <div class="form-group col-md-2">
-                    </div>
-    
-    
+                <div class="col">
+                    <h1 style="text-align: center;">Create a car</h1>
                 </div>
-    
-            </form>
-        </div>
-    
-    
-    </div>
+                <div class="col">
 
-
-
-    <div id="carCreated" style="display:none" >
-        <div class="row align-items-center">
-            <div class="col">
-    
-            </div>
-            <div class="col">
-                <h1 style="text-align: center;">Add Wheels</h1>
-            </div>
-            <div class="col">
-    
-            </div>
-    
-        </div>
-
-        <div >
-
-            <form class="container my-5">
-
-                <div class="row d-flex justify-content-center">
-                
-                    <div class="form-group col-md-2" id="plateRes">
-                    </div>
-                
-                    <div class="form-group col-md-2" id="brandRes">
-                
-                    </div>
-                
-                    <div class="form-group col-md-2" id="colorRes">
-                        
-                    </div>
-
-                   
                 </div>
 
-                <div class= "my-5">
-    
-                    <form class="container my-5">
-            
-                        <div class="row d-flex justify-content-center">
-            
-                            <div class="form-group col-md-2">
-                                <label for="brandWheel1">Brand 1</label>
-                                <input type="text" class="form-control" id="brandWheel1">
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="brandWheel2">Brand 2</label>
-                                <input type="text" class="form-control" id="brandWheel2">
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="brandWheel3">Brand 3</label>
-                                <input type="text" class="form-control" id="brandWheel3">
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="brandWheel4">Brand 4</label>
-                                <input type="text" class="form-control" id="brandWheel4">
-                            </div>
-            
-            
-            
+            </div>
+
+            <div>
+
+                <form class="container my-5">
+
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="form-group col-md-2">
+                            <label for="inputPlate">Plate</label>
+                            <input type="text" class="form-control" id="inputPlate">
                         </div>
-                        <div class="row d-flex justify-content-center">
-            
-                            <div class="form-group col-md-2">
-                                <label for="diamWheel1">Diameter 1</label>
-                                <input type="text" class="form-control" id="diamWheel1">
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="diamWheel2">Diameter 2</label>
-                                <input type="text" class="form-control" id="diamWheel2">
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="diamWheel3">Diameter 3</label>
-                                <input type="text" class="form-control" id="diamWheel3">
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="diamWheel4">Diameter 4</label>
-                                <input type="text" class="form-control" id="diamWheel4">
-                            </div>
-            
-            
-            
+                        <div class="form-group col-md-2">
+                            <label for="inputBrand">Brand</label>
+                            <input type="text" class="form-control" id="inputBrand">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputColor">Color</label>
+                            <input type="text" class="form-control" id="inputColor">
                         </div>
 
 
 
-                <div class="row d-flex justify-content-center my-5">
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="form-group col-md-2">
+                            <button type="button" class="btn btn-primary"
+                                onclick="createCar(inputPlate.value, inputColor.value, inputBrand.value)">Create</button>
+                            <p id="carInfo"></p>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                        </div>
+
+                        <div class="form-group col-md-2">
+                        </div>
+
+
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+
+
+
+        <div id="addWheels" style="display:none">
+            <div class="row align-items-center">
+                <div class="col">
+
+                </div>
+                <div class="col">
+                    <h1 style="text-align: center;">Add Wheels</h1>
+                </div>
+                <div class="col">
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <form class="container my-5">
+
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="form-group col-md-2" id="plateRes">
+                        </div>
+
+                        <div class="form-group col-md-2" id="brandRes">
+
+                        </div>
+
+                        <div class="form-group col-md-2" id="colorRes">
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="my-5">
+
+                        <form class="container my-5">
+
+                            <div class="row d-flex justify-content-center">
+
+                                <div class="form-group col-md-2">
+                                    <label for="brandWheel1">Brand 1</label>
+                                    <input type="text" class="form-control" id="brandWheel1">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="brandWheel2">Brand 2</label>
+                                    <input type="text" class="form-control" id="brandWheel2">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="brandWheel3">Brand 3</label>
+                                    <input type="text" class="form-control" id="brandWheel3">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="brandWheel4">Brand 4</label>
+                                    <input type="text" class="form-control" id="brandWheel4">
+                                </div>
+
+
+
+                            </div>
+                            <div class="row d-flex justify-content-center">
+
+                                <div class="form-group col-md-2">
+                                    <label for="diamWheel1">Diameter 1</label>
+                                    <input type="text" class="form-control" id="diamWheel1">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="diamWheel2">Diameter 2</label>
+                                    <input type="text" class="form-control" id="diamWheel2">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="diamWheel3">Diameter 3</label>
+                                    <input type="text" class="form-control" id="diamWheel3">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="diamWheel4">Diameter 4</label>
+                                    <input type="text" class="form-control" id="diamWheel4">
+                                </div>
+
+
+
+                            </div>
+                            <div class="row d-flex justify-content-center my-5">
+                                <div class="form-group col-md-4">
+                                    <button type="button" class="btn btn-primary" onclick="addWheels(diamWheel1.value, diamWheel2.value, diamWheel3.value, diamWheel4.value,
+                                brandWheel1.value, brandWheel2.value, brandWheel3.value, brandWheel4.value)">
+                                        Add Wheels
+                                    </button>
+                                </div>
+
+                                <div class="form-group col-md-2">
+                                </div>
+
+                                <div class="form-group col-md-2">
+                                </div>
+                            </div>
+
+
+                                <!-- onclick="addWheels(diamWheel1.value, diamWheel2.value, diamWheel3.value, diamWheel4.value,
+                            brandWheel1.value, brandWheel2.value, brandWheel3.value, brandWheel4.value,) -->
+                                <!---Restart-->
+                                <!-- <div class="row d-flex justify-content-center my-5">
                     <div class="form-group col-md-4">
                         <button type="button" class="btn btn-primary"
                         onclick="window.location.href = 'index.html';">
@@ -175,15 +192,55 @@
                     </div>
 
 
+                </div> -->
+
+                        </form>
+
+                    </div>
+            </div>
+        </div>
+
+        <div id="showCarCreated" style="display:none">
+            <div class="row d-flex justify-content-center">
+                <!-- Car          -->
+                <div class="form-group col-md-2" id="plateRes2">
+                   
                 </div>
 
-            </form>
+                <div class="form-group col-md-2" id="brandRes">
+                </div>
 
+                <div class="form-group col-md-2" id="colorRes">
+                </div>
+                <!-- Wheels -->
+                <div class="form-group col-md-2" id="diamWheel1">
+                   
+                </div>
+                <div class="form-group col-md-2" id="brandWheel1">
+                </div>
+                <div class="form-group col-md-2" id="diamWheel2">
+                </div>
+                <div class="form-group col-md-2" id="brandWheel2">
+                </div>
+                <div class="form-group col-md-2" id="diamWheel3">
+                </div>
+                <div class="form-group col-md-2" id="brandWheel3">
+                    test
+                </div>
+                <div class="form-group col-md-2" id="diamWheel4">
+                </div>
+                <div class="form-group col-md-2" id="brandWheel4">
+                </div>
+
+
+
+
+
+
+            </div>
         </div>
-    </div>
-        
 
-        
+
 
     </main>
 
