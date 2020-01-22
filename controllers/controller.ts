@@ -9,6 +9,9 @@ function createCar(plate:string,color:string,brand:string){
    var addWheels = document.getElementById("addWheels") as HTMLElement;
    addWheels.style.display = "block";
 
+   var carCreatedTitle = document.getElementById("carCreatedTitle") as HTMLElement;
+   carCreatedTitle.style.display = "block";
+
    var pRes = document.getElementById("plateRes") as HTMLElement;
    pRes.innerHTML = "Plate: " + "<b>" + car.plate + "</b>";
 

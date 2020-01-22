@@ -6,6 +6,8 @@ function createCar(plate, color, brand) {
     formInput.style.display = "none";
     var addWheels = document.getElementById("addWheels");
     addWheels.style.display = "block";
+    var carCreatedTitle = document.getElementById("carCreatedTitle");
+    carCreatedTitle.style.display = "block";
     var pRes = document.getElementById("plateRes");
     pRes.innerHTML = "Plate: " + "<b>" + car.plate + "</b>";
     var bRes = document.getElementById("brandRes");
