@@ -1,6 +1,6 @@
 
 let car: Car;
-var plateRegEx = /^[0-9]{4}[A-Z]{3}$/;
+var plateRegEx = /^[0-9]{4}[a-zA-Z]{3}$/;
 
 
 function createCar(){
@@ -11,8 +11,9 @@ function createCar(){
 
    var color = document.getElementById("inputColor") as HTMLInputElement;
 
-//    if(plateRegEx.test(plate.value)){
-   if("1234asd" == plate.value){
+   
+   if(plateRegEx.test(plate.value)){
+   // if("1234asd" == plate.value){
 
     var formInput = document.getElementById("formInput") as HTMLElement;
     formInput.style.display = "none";
@@ -53,6 +54,8 @@ function createCar(){
 
 function addWheels(
     ){
+
+      
     
 
 // view selector
@@ -62,45 +65,85 @@ function addWheels(
 
 
 //  get Wheels diameter
-   let diamW1 = document.getElementById("diamInput1") as HTMLElement;
-   let diamW2 = document.getElementById("diamInput2") as HTMLElement;
-   let diamW3 = document.getElementById("diamInput3") as HTMLElement;
-   let diamW4 = document.getElementById("diamInput4") as HTMLElement;
-  
+   let diamW1 = document.getElementById("diamInput1") as HTMLInputElement;
+   let diamW2 = document.getElementById("diamInput2") as HTMLInputElement;
+   let diamW3 = document.getElementById("diamInput3") as HTMLInputElement;
+   let diamW4 = document.getElementById("diamInput4") as HTMLInputElement;
+    
+    let dw1 = parseFloat(diamW1.value);
+    let dw2 = parseFloat(diamW2.value);
+    let dw3 = parseFloat(diamW3.value);
+    let dw4 = parseFloat(diamW4.value);
+
+ 
+   if(dw1 > 2 || dw1 < 0.4){
+      alert("El diámetro de la rueda 1 es incorrecto");
+      return false;
+   }else if(dw2 > 2 || dw2 < 0.4){
+      alert("El diámetro de la rueda 2 es incorrecto");
+      return false;
+   }else if(dw3 > 2 || dw3 < 0.4){
+      alert("El diámetro de la rueda 3 es incorrecto");
+      return false;
+   }else if(dw4 > 2 || dw4 < 0.4){
+    alert("El diámetro de la rueda 4 es incorrecto");
+    return false;
+   }else{
+ 
 //   get Wheels Brand
 
-   let brandW1 = document.getElementById("brandInput1") as HTMLElement;
-   let brandW2 = document.getElementById("brandInput2") as HTMLElement;
-   let brandW3 = document.getElementById("brandInput3") as HTMLElement;
-   let brandW4 = document.getElementById("brandInput4") as HTMLElement;
+let brandW1 = document.getElementById("brandInput1") as HTMLInputElement;
+let brandW2 = document.getElementById("brandInput2") as HTMLInputElement;
+let brandW3 = document.getElementById("brandInput3") as HTMLInputElement;
+let brandW4 = document.getElementById("brandInput4") as HTMLInputElement;
 
-   let wheel1 = new Wheel(diamW1.value, brandW1.value);
-   let wheel2 = new Wheel(diamW2.value, brandW2.value);
-   let wheel3 = new Wheel(diamW3.value, brandW3.value);
-   let wheel4 = new Wheel(diamW4.value, brandW4.value);
-   
+
+let wheel1 = new Wheel(dw1, brandW1.value);
+let wheel2 = new Wheel(dw2, brandW2.value);
+let wheel3 = new Wheel(dw3, brandW3.value);
+let wheel4 = new Wheel(dw4, brandW4.value);
+
 
 //    print wheels
-   let diamW1 = document.getElementById("diamInput1") as HTMLElement;
-   diamW1.innerHTML = "Diameter W 1: " + "<b>" + wheel1.diameter + "</b>";
-   
-   diamW2.innerHTML = "Diameter W 2: " + "<b>" + wheel2.diameter + "</b>";
-   diamW2.innerHTML = "Diameter W 2: " + "<b>" + wheel2.diameter + "</b>";
-   diamW4.innerHTML = "Diameter W 4: " + "<b>" + wheel4.diameter + "</b>";
 
-   brandW1.innerHTML = "Brand W 1: " + "<b>" + wheel1.brand + "</b>";
-   brandW2.innerHTML = "Brand W 2: " + "<b>" + wheel2.brand + "</b>";
-   brandW3.innerHTML = "Brand W 3: " + "<b>" + wheel3.brand + "</b>";
-   brandW4.innerHTML = "Brand W 4: " + "<b>" + wheel4.brand + "</b>";
+var bw1Res = document.getElementById("brandOutput1") as HTMLElement;
+bw1Res.innerHTML = "Brand W 1: " + "<b>" + wheel1.brand + "</b>";
 
-   let formInput = document.getElementById("formInput") as HTMLElement;
-   formInput.style.display = "none";
+var bw2Res = document.getElementById("brandOutput2") as HTMLElement;
+bw2Res.innerHTML = "Brand W 2: " + "<b>" + wheel2.brand + "</b>";
 
-   let addWheels = document.getElementById("addWheels") as HTMLElement;
-   addWheels.style.display = "none";
+var bw3Res = document.getElementById("brandOutput3") as HTMLElement;
+bw3Res.innerHTML = "Brand W 3: " + "<b>" + wheel3.brand + "</b>";
 
-   let showCarCreated = document.getElementById("showCarCreated") as HTMLElement;
-   showCarCreated.style.display = "block";
- 
+var bw4Res = document.getElementById("brandOutput4") as HTMLElement;
+bw4Res.innerHTML = "Brand W 4: " + "<b>" + wheel4.brand + "</b>";
+
+
+var dw1Res = document.getElementById("diamOutput1") as HTMLElement;
+dw1Res.innerHTML = "Diameter W 1: " + "<b>" + wheel1.diameter + "</b>";
+
+var dw2Res = document.getElementById("diamOutput2") as HTMLElement;
+dw2Res.innerHTML = "Diameter W 2: " + "<b>" + wheel2.diameter + "</b>";
+
+var dw3Res = document.getElementById("diamOutput3") as HTMLElement;
+dw3Res.innerHTML = "Diameter W 3: " + "<b>" + wheel3.diameter + "</b>";
+
+var dw4Res = document.getElementById("diamOutput4") as HTMLElement;
+dw4Res.innerHTML = "Diameter W 4: " + "<b>" + wheel4.diameter + "</b>";
+
+
+
+
+let formInput = document.getElementById("formInput") as HTMLElement;
+formInput.style.display = "none";
+
+let addWheels = document.getElementById("addWheels") as HTMLElement;
+addWheels.style.display = "none";
+
+let showCarCreated = document.getElementById("showCarCreated") as HTMLElement;
+showCarCreated.style.display = "block";
+
 }
 
+ }
+ 
