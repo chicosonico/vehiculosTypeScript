@@ -2,11 +2,11 @@
 var car;
 var plateRegEx = /^[0-9]{4}[a-zA-Z]{3}$/;
 function createCar() {
+    //  get car data
     var plate = document.getElementById("inputPlate");
     var brand = document.getElementById("inputBrand");
     var color = document.getElementById("inputColor");
-    if (plateRegEx.test(plate.value)) {
-        // if("1234asd" == plate.value){
+    if (plateRegEx.test(plate.value)) { // plate format validator
         var formInput = document.getElementById("formInput");
         formInput.style.display = "none";
         var addWheels = document.getElementById("addWheels");
@@ -27,12 +27,7 @@ function createCar() {
         return false;
     }
 }
-// Plate validator
-// function validarMatriculaEuropea_Exp(plateVal:string) {
-//     return plateVal.match("^[0-9]{4}[A-Z]{3}$");
-// }
 function addWheels() {
-    // view selector
     //  get Wheels diameter
     var diamW1 = document.getElementById("diamInput1");
     var diamW2 = document.getElementById("diamInput2");
@@ -42,6 +37,7 @@ function addWheels() {
     var dw2 = parseFloat(diamW2.value);
     var dw3 = parseFloat(diamW3.value);
     var dw4 = parseFloat(diamW4.value);
+    // diameter validator
     if (dw1 > 2 || dw1 < 0.4) {
         alert("El diámetro de la rueda 1 es incorrecto");
         return false;
@@ -85,6 +81,7 @@ function addWheels() {
         dw3Res.innerHTML = "Diameter W 3: " + "<b>" + wheel3.diameter + "</b>";
         var dw4Res = document.getElementById("diamOutput4");
         dw4Res.innerHTML = "Diameter W 4: " + "<b>" + wheel4.diameter + "</b>";
+        // form selector
         var formInput = document.getElementById("formInput");
         formInput.style.display = "none";
         var addWheels_1 = document.getElementById("addWheels");
