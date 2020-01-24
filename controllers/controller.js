@@ -66,26 +66,34 @@ function addWheels() {
         var wheel4 = new Wheel(dw4, brandW4.value);
         //    print wheels
         var bw1Res = document.getElementById("brandOutput1");
-        bw1Res.innerHTML = "Brand W 1: " + "<b>" + wheel1.brand + "</b>";
+        bw1Res.innerHTML = "Brand Wheel 1: " + "<b>" + wheel1.brand + "</b>";
         var bw2Res = document.getElementById("brandOutput2");
-        bw2Res.innerHTML = "Brand W 2: " + "<b>" + wheel2.brand + "</b>";
+        bw2Res.innerHTML = "Brand Wheel 2: " + "<b>" + wheel2.brand + "</b>";
         var bw3Res = document.getElementById("brandOutput3");
-        bw3Res.innerHTML = "Brand W 3: " + "<b>" + wheel3.brand + "</b>";
+        bw3Res.innerHTML = "Brand Wheel 3: " + "<b>" + wheel3.brand + "</b>";
         var bw4Res = document.getElementById("brandOutput4");
-        bw4Res.innerHTML = "Brand W 4: " + "<b>" + wheel4.brand + "</b>";
+        bw4Res.innerHTML = "Brand Wheel 4: " + "<b>" + wheel4.brand + "</b>";
         var dw1Res = document.getElementById("diamOutput1");
-        dw1Res.innerHTML = "Diameter W 1: " + "<b>" + wheel1.diameter + "</b>";
+        dw1Res.innerHTML = "Diameter Wheel 1: " + "<b>" + wheel1.diameter + "</b>";
         var dw2Res = document.getElementById("diamOutput2");
-        dw2Res.innerHTML = "Diameter W 2: " + "<b>" + wheel2.diameter + "</b>";
+        dw2Res.innerHTML = "Diameter Wheel 2: " + "<b>" + wheel2.diameter + "</b>";
         var dw3Res = document.getElementById("diamOutput3");
-        dw3Res.innerHTML = "Diameter W 3: " + "<b>" + wheel3.diameter + "</b>";
+        dw3Res.innerHTML = "Diameter Wheel 3: " + "<b>" + wheel3.diameter + "</b>";
         var dw4Res = document.getElementById("diamOutput4");
-        dw4Res.innerHTML = "Diameter W 4: " + "<b>" + wheel4.diameter + "</b>";
+        dw4Res.innerHTML = "Diameter Wheel 4: " + "<b>" + wheel4.diameter + "</b>";
+        var pRes = document.getElementById("plateCreated");
+        pRes.innerHTML = "Plate: " + "<b>" + car.plate + "</b>";
+        var bRes = document.getElementById("brandCreated");
+        bRes.innerHTML = "Brand: " + "<b>" + car.brand + "</b>";
+        var cRes = document.getElementById("colorCreated");
+        cRes.innerHTML = "Color: " + "<b>" + car.color + "</b>";
         // form selector
         var formInput = document.getElementById("formInput");
         formInput.style.display = "none";
         var addWheels_1 = document.getElementById("addWheels");
         addWheels_1.style.display = "none";
+        var carCreatedTitle = document.getElementById("carCreatedTitle");
+        carCreatedTitle.style.display = "none";
         var showCarCreated = document.getElementById("showCarCreated");
         showCarCreated.style.display = "block";
     }
