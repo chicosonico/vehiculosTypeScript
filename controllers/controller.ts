@@ -12,6 +12,8 @@ function createCar() {
 
    var color = document.getElementById("inputColor") as HTMLInputElement;
 
+   
+
 
    if (plateRegEx.test(plate.value)) { // plate format validator
 
@@ -23,12 +25,14 @@ function createCar() {
 
       var carCreatedTitle = document.getElementById("carCreatedTitle") as HTMLElement;
       carCreatedTitle.style.display = "block";
+      
+
 
       car = new Car(plate.value, brand.value, color.value);
       console.log(car);
 
       var pRes = document.getElementById("plateRes") as HTMLElement;
-      pRes.innerHTML = "Plate: " + "<b>" + car.plate + "</b>";
+      pRes.innerHTML = "Plate: " + "<b>" + car.plate.toUpperCase() + "</b>";
 
       var bRes = document.getElementById("brandRes") as HTMLElement;
       bRes.innerHTML = "Brand: " + "<b>" + car.brand + "</b>";
@@ -116,7 +120,7 @@ function addWheels(
 
 
       var pRes = document.getElementById("plateCreated") as HTMLElement;
-      pRes.innerHTML = "Plate: " + "<b>" + car.plate + "</b>";
+      pRes.innerHTML = "Plate: " + "<b>" + car.plate.toUpperCase() + "</b>";
 
       var bRes = document.getElementById("brandCreated") as HTMLElement;
       bRes.innerHTML = "Brand: " + "<b>" + car.brand + "</b>";
@@ -134,8 +138,6 @@ function addWheels(
 
       var carCreatedTitle = document.getElementById("carCreatedTitle") as HTMLElement;
       carCreatedTitle.style.display = "none";
-
-   
 
       let showCarCreated = document.getElementById("showCarCreated") as HTMLElement;
       showCarCreated.style.display = "block";

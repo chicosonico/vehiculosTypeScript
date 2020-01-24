@@ -16,7 +16,7 @@ function createCar() {
         car = new Car(plate.value, brand.value, color.value);
         console.log(car);
         var pRes = document.getElementById("plateRes");
-        pRes.innerHTML = "Plate: " + "<b>" + car.plate + "</b>";
+        pRes.innerHTML = "Plate: " + "<b>" + car.plate.toUpperCase() + "</b>";
         var bRes = document.getElementById("brandRes");
         bRes.innerHTML = "Brand: " + "<b>" + car.brand + "</b>";
         var cRes = document.getElementById("colorRes");
@@ -82,7 +82,7 @@ function addWheels() {
         var dw4Res = document.getElementById("diamOutput4");
         dw4Res.innerHTML = "Diameter Wheel 4: " + "<b>" + wheel4.diameter + "</b>";
         var pRes = document.getElementById("plateCreated");
-        pRes.innerHTML = "Plate: " + "<b>" + car.plate + "</b>";
+        pRes.innerHTML = "Plate: " + "<b>" + car.plate.toUpperCase() + "</b>";
         var bRes = document.getElementById("brandCreated");
         bRes.innerHTML = "Brand: " + "<b>" + car.brand + "</b>";
         var cRes = document.getElementById("colorCreated");
