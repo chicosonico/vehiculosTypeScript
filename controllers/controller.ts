@@ -1,6 +1,7 @@
 
 let car: Car;
 var plateRegEx = /^[0-9]{4}[a-zA-Z]{3}$/;
+var diamRegEx = /^([0-9])*$/;
 
 
 function createCar() {
@@ -12,10 +13,16 @@ function createCar() {
 
    var color = document.getElementById("inputColor") as HTMLInputElement;
 
-   
+   //empty field validator
 
+   if(plate.value == ""||brand.value == ""||color.value == ""){
+      alert("Los campos no pueden quedar vacios"); 
+      return false;
+    }
 
    if (plateRegEx.test(plate.value)) { // plate format validator
+
+       // form selector
 
       var formInput = document.getElementById("formInput") as HTMLElement;
       formInput.style.display = "none";
@@ -26,7 +33,7 @@ function createCar() {
       var carCreatedTitle = document.getElementById("carCreatedTitle") as HTMLElement;
       carCreatedTitle.style.display = "block";
       
-
+     //Car creator
 
       car = new Car(plate.value, brand.value, color.value);
       console.log(car);
@@ -62,34 +69,42 @@ function addWheels(
    let dw3 = parseFloat(diamW3.value);
    let dw4 = parseFloat(diamW4.value);
 
-   // diameter validator
-   if (dw1 > 2 || dw1 < 0.4) {
+     //   get Wheels Brand
+
+     let brandW1 = document.getElementById("brandInput1") as HTMLInputElement;
+     let brandW2 = document.getElementById("brandInput2") as HTMLInputElement;
+     let brandW3 = document.getElementById("brandInput3") as HTMLInputElement;
+     let brandW4 = document.getElementById("brandInput4") as HTMLInputElement;
+
+
+     let wheel1 = new Wheel(dw1, brandW1.value);
+     let wheel2 = new Wheel(dw2, brandW2.value);
+     let wheel3 = new Wheel(dw3, brandW3.value);
+     let wheel4 = new Wheel(dw4, brandW4.value);
+
+
+   // empty fields amd diameter validator
+    
+    if(brandW1.value == ""||brandW2.value == ""||brandW3.value == ""||brandW4.value == ""){
+      alert("Los campos no pueden quedar vacios"); 
+      return false;
+    }else if (diamW1.value == "" || dw1 > 2 || dw1 < 0.4 || diamRegEx.test(diamW1.value)== false ) {
       alert("El diámetro de la rueda 1 es incorrecto");
       return false;
-   } else if (dw2 > 2 || dw2 < 0.4) {
+   } else if (diamW2.value == "" || dw2 > 2 || dw2 < 0.4||diamRegEx.test(diamW2.value)== false ) {
       alert("El diámetro de la rueda 2 es incorrecto");
       return false;
-   } else if (dw3 > 2 || dw3 < 0.4) {
+   } else if (diamW3.value == "" || dw3 > 2 || dw3 < 0.4 || diamRegEx.test(diamW3.value)== false) {
       alert("El diámetro de la rueda 3 es incorrecto");
       return false;
-   } else if (dw4 > 2 || dw4 < 0.4) {
+   } else if (diamW4.value == "" || dw4 > 2 || dw4 < 0.4 || diamRegEx.test(diamW4.value)== false) {
       alert("El diámetro de la rueda 4 es incorrecto");
       return false;
    } else {
 
-      //   get Wheels Brand
+      
 
-      let brandW1 = document.getElementById("brandInput1") as HTMLInputElement;
-      let brandW2 = document.getElementById("brandInput2") as HTMLInputElement;
-      let brandW3 = document.getElementById("brandInput3") as HTMLInputElement;
-      let brandW4 = document.getElementById("brandInput4") as HTMLInputElement;
-
-
-      let wheel1 = new Wheel(dw1, brandW1.value);
-      let wheel2 = new Wheel(dw2, brandW2.value);
-      let wheel3 = new Wheel(dw3, brandW3.value);
-      let wheel4 = new Wheel(dw4, brandW4.value);
-
+    
 
       //    print wheels
 
